@@ -1,0 +1,11 @@
+footer {
+  text-align: center;
+  .ls-footer-border {
+    background: linear-gradient(90deg, var(--c_border-start) 0%, var(--c_border-middle) 51.04%, var(--c_border-stop) 100%);
+    height: 4px;
+    width: 100%;
+  }
+  .ls-footnote {
+    padding: 15px;
+  }
+}

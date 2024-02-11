@@ -1,0 +1,206 @@
+@use '../variables/breakpoints.scss' as settings;
+@use 'sass:math' as math;
+
+// font-family
+$ff-name: "Source Sans Pro";
+$ff-name-italic: "Source Sans Pro Italic";
+
+$ff-name-light: "Source Sans Pro Light";
+$ff-name-light-italic: "Source Sans Pro Light Italic";
+
+$ff-name-extra-light: "Source Sans Pro Extra-Light";
+$ff-name-extra-light-italic: "Source Sans Pro Italic Extra-Light";
+
+$ff-name-semi-bold: "Source Sans Pro Semi-Bold";
+$ff-name-semi-bold-italic: "Source Sans Pro Semi-Bold Italic";
+
+$ff-name-bold: "Source Sans Pro Bold";
+$ff-name-bold-italic: "Source Sans Pro Bold Italic";
+
+$ff-name-black: "Source Sans Pro Black";
+$ff-name-black-italic: "Source Sans Pro Black Italic";
+
+$ff-default: Arial, Helvetica, sans-serif;
+
+$ff-primary: $ff-name, $ff-default;
+$ff-primary-italic: $ff-name-italic, $ff-default;
+$ff-primary-light: $ff-name-light, $ff-default;
+$ff-primary-light-italic: $ff-name-light-italic, $ff-default;
+$ff-primary-semi-bold: $ff-name-semi-bold, $ff-default;
+$ff-primary-semi-bold-italic: $ff-name-semi-bold-italic, $ff-default;
+$ff-primary-bold: $ff-name-bold, $ff-default;
+$ff-primary-bold-italic: $ff-name-bold-italic, $ff-default;
+$ff-primary-black: $ff-name-black, $ff-default;
+$ff-primary-black-italic: $ff-name-black-italic, $ff-default;
+
+@font-face {
+  font-family: $ff-name;
+  src:
+    url("./fonts/sourcesanspro-regular-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-italic;
+  src:
+    url("./fonts/sourcesanspro-italic-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-light;
+  src:
+    url("./fonts/sourcesanspro-light-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-light-italic;
+  src:
+    url("./fonts/sourcesanspro-lightitalic-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-extra-light;
+  src:
+    url("./fonts/sourcesanspro-extralight-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-extra-light-italic;
+  src:
+    url("./fonts/sourcesanspro-extralightitalic-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-extralightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: $ff-name-semi-bold;
+  src:
+    url("./fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-semi-bold-italic;
+  src:
+    url("./fonts/sourcesanspro-semibolditalic-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-bold;
+  src:
+    url("./fonts/sourcesanspro-bold-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-bold-italic;
+  src:
+    url("./fonts/sourcesanspro-bolditalic-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-black;
+  src:
+    url("./fonts/sourcesanspro-black-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $ff-name-black-italic;
+  src:
+  url("./fonts/")
+    url("./fonts/sourcesanspro-blackitalic-webfont.woff2") format("woff2"),
+    url("./fonts/sourcesanspro-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Font Sizes
+
+$fs-breakpoints: (
+  xxsmall: (minWidth: map-get(settings.$breakpoints, xxsmall)),
+  xsmall: (minWidth: map-get(settings.$breakpoints, xsmall)),
+  small: (minWidth: map-get(settings.$breakpoints, small)),
+  medium: (minWidth: map-get(settings.$breakpoints, medium)),
+  large: (minWidth: map-get(settings.$breakpoints, large)),
+  xlarge: (minWidth: map-get(settings.$breakpoints, xlarge)),
+  xxlarge: (minWidth: map-get(settings.$breakpoints, xxlarge)),
+);
+
+$fs-base: (
+  xxsmall: (1rem, 1.5, normal)
+);
+
+$fs-h1-title: (
+  xxsmall: (2.5rem, 1, normal),
+  medium: (3.5rem, 1),
+  xlarge: (4rem, 1)
+);
+
+$fs-p: (
+  xxsmall: (1rem, 1.5, normal),
+  xlarge: (1rem, 1.5, normal)
+);
+
+$fs-footnote: (
+  xxsmall: (1rem, 1.3125, normal),
+  xlarge: (1.25rem, 1.6875, normal)
+);
+
+$fs-intro-small: (
+    xxsmall: (1.5rem, math.div(2, 1.5)),
+    medium: (2rem, math.div(2.5, 2)),
+    xlarge: (2.5rem, math.div(3, 2.5))
+);
+
+$fs-intro-medium: (
+    xxsmall: (2rem, math.div(2.5, 2)),
+    medium: (3rem, math.div(3.5, 3)),
+    xlarge: (3.5rem, math.div(4, 3.5))
+);
+
+$fs-intro-large: (
+    xxsmall: (3rem, math.div(3.5, 3)),
+    medium: (4rem, math.div(4.5, 4)),
+    xlarge: (4.5rem, math.div(5, 4.5))
+);
+
+$fs-intro-xl: (
+    xxsmall: (4rem, math.div(4.5, 4)),
+    medium: (5rem, math.div(5.5, 5)),
+    xlarge: (6rem, math.div(6.5, 6))
+);
+
+$fs-intro-xxl: (
+    xxsmall: (5rem, math.div(5.5, 5)),
+    medium: (6rem, math.div(6.5, 6)),
+    xlarge: (7rem, math.div(7.5, 7))
+);

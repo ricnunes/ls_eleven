@@ -1,0 +1,10 @@
+$breakpoints: (
+  xxsmall: 0, // very small mobile portrait
+  xsmall: 321px, // mobile portrait
+  small: 481px, // mobile landscape
+  medium: 768px, // tablet portrait
+  large: 980px, // small laptops + ipad pro
+  xlarge: 1200px, // desktop screens
+  xxlarge: 1600px, // large desktop screens
+);
+$breakpoint-classes: (xxsmall xsmall small medium large xlarge xxlarge);

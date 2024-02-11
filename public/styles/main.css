@@ -1,0 +1,441 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/sourcesanspro-regular-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Italic";
+  src: url("./fonts/sourcesanspro-italic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Light";
+  src: url("./fonts/sourcesanspro-light-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Light Italic";
+  src: url("./fonts/sourcesanspro-lightitalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Extra-Light";
+  src: url("./fonts/sourcesanspro-extralight-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Italic Extra-Light";
+  src: url("./fonts/sourcesanspro-extralightitalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-extralightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Semi-Bold";
+  src: url("./fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Semi-Bold Italic";
+  src: url("./fonts/sourcesanspro-semibolditalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  src: url("./fonts/sourcesanspro-bold-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Bold Italic";
+  src: url("./fonts/sourcesanspro-bolditalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Black";
+  src: url("./fonts/sourcesanspro-black-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Black Italic";
+  src: url("./fonts/") url("./fonts/sourcesanspro-blackitalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/sourcesanspro-regular-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Italic";
+  src: url("./fonts/sourcesanspro-italic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Light";
+  src: url("./fonts/sourcesanspro-light-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Light Italic";
+  src: url("./fonts/sourcesanspro-lightitalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Extra-Light";
+  src: url("./fonts/sourcesanspro-extralight-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Italic Extra-Light";
+  src: url("./fonts/sourcesanspro-extralightitalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-extralightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Semi-Bold";
+  src: url("./fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Semi-Bold Italic";
+  src: url("./fonts/sourcesanspro-semibolditalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  src: url("./fonts/sourcesanspro-bold-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Bold Italic";
+  src: url("./fonts/sourcesanspro-bolditalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Black";
+  src: url("./fonts/sourcesanspro-black-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro Black Italic";
+  src: url("./fonts/") url("./fonts/sourcesanspro-blackitalic-webfont.woff2") format("woff2"), url("./fonts/sourcesanspro-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen and (min-width: 0) {
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (min-width: 0) {
+  h1, .ls-title-1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: normal;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1, .ls-title-1 {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1, .ls-title-1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 0) {
+  p, .ls-paragraph {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+}
+@media screen and (min-width: 1200px) {
+  p, .ls-paragraph {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .ls-footnote {
+    font-size: 1rem;
+    line-height: 1.3125;
+    letter-spacing: normal;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ls-footnote {
+    font-size: 1.25rem;
+    line-height: 1.6875;
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .intro-small {
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro-small {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro-small {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .intro-medium {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro-medium {
+    font-size: 3rem;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro-medium {
+    font-size: 3.5rem;
+    line-height: 1.1428571429;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .intro-large {
+    font-size: 3rem;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro-large {
+    font-size: 4rem;
+    line-height: 1.125;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro-large {
+    font-size: 4.5rem;
+    line-height: 1.1111111111;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .intro-xl {
+    font-size: 4rem;
+    line-height: 1.125;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro-xl {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro-xl {
+    font-size: 6rem;
+    line-height: 1.0833333333;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .intro-xxl {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro-xxl {
+    font-size: 6rem;
+    line-height: 1.0833333333;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro-xxl {
+    font-size: 7rem;
+    line-height: 1.0714285714;
+  }
+}
+
+:root {
+  --c_bg-primary: #404151;
+  --c_border-start: #2AA694;
+  --c_border-middle: #69D894;
+  --c_border-stop: #FCDD13;
+  --c_text-white: #ffffff;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background: var(--c_bg-primary);
+  color: var(--c_text-white);
+}
+
+.ls-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+  position: relative;
+}
+.ls-container--hidden {
+  display: none;
+}
+
+.ls-video-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: opacity;
+  height: calc(100vh - 60px);
+}
+@media screen and (min-width: 768px) {
+  .ls-video-container {
+    height: calc(100vh - 70px);
+  }
+}
+
+.ls-video--desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .ls-video--desktop {
+    display: block;
+  }
+}
+.ls-video--mobile {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .ls-video--mobile {
+    display: none;
+  }
+}
+.ls-video--full-width {
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 60px);
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .ls-video--full-width {
+    height: calc(100vh - 70px);
+  }
+}
+.ls-video video {
+  width: 100% !important;
+  height: auto !important;
+}
+
+footer {
+  text-align: center;
+}
+footer .ls-footer-border {
+  background: linear-gradient(90deg, var(--c_border-start) 0%, var(--c_border-middle) 51.04%, var(--c_border-stop) 100%);
+  height: 4px;
+  width: 100%;
+}
+footer .ls-footnote {
+  padding: 15px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/scss/base/reset.scss%22,%22../../src/scss/variables/typography.scss%22,%22../../src/scss/base/typography.scss%22,%22../../src/scss/mixins/typography.scss%22,%22../../src/scss/variables/colors.scss%22,%22../../src/scss/base/styles.scss%22,%22../../src/scss/styling/_video.scss%22,%22../../src/scss/styling/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22main.css%22%7D */

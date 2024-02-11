@@ -1,0 +1,45 @@
+@use "../mixins/typography.scss" as typographyMixins;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  @include typographyMixins.font-size($fs-base);
+  font-family: $ff-primary;
+  @include typographyMixins.hyphenate;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .ls-title-1 {
+  @include typographyMixins.font-size($fs-h1-title);
+}
+
+p, .ls-paragraph {
+  @include typographyMixins.font-size($fs-p);
+}
+
+.ls-footnote {
+  @include typographyMixins.font-size($fs-footnote);
+}
+
+.intro-small {
+  @include typographyMixins.font-size($fs-intro-small);
+}
+
+.intro-medium {
+  @include typographyMixins.font-size($fs-intro-medium);
+}
+
+.intro-large {
+  @include typographyMixins.font-size($fs-intro-large);
+}
+
+.intro-xl {
+  @include typographyMixins.font-size($fs-intro-xl);
+}
+
+.intro-xxl {
+  @include typographyMixins.font-size($fs-intro-xxl);
+}
