@@ -5,6 +5,7 @@ function videoLoader() {
   const LSVideo = document.getElementsByTagName('video')[0];
   const LSSource = document.createElement('source');
   let w = window.matchMedia("(max-width: 768px)");
+  let timeOutFunctionId;
 
   LSSource.id = "hvid"
   LSSource.setAttribute("type", "video/mp4");
@@ -29,7 +30,7 @@ function videoLoader() {
     LSVideo.play();
   }
 
-  window.addEventListener("resize", function() {
+  function workAfterResizeIsDone() {
     let w = window.matchMedia("(max-width: 768px)");
     const LSSourceExisting = document.getElementById("hvid");
 
@@ -46,5 +47,10 @@ function videoLoader() {
       LSVideo.load();
       LSVideo.play();
     }
+  }
+
+  window.addEventListener("resize", function () {
+    clearTimeout(timeOutFunctionId); 
+    timeOutFunctionId = setTimeout(workAfterResizeIsDone, 500); 
   })
 }
