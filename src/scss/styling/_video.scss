@@ -2,9 +2,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   will-change: opacity;
-  height: calc(100vh - 60px);
+  height: calc(100svh - 60px);
   @media screen and (min-width: 768px) {
-    height: calc(100vh - 70px);
+    height: calc(100svh - 70px);
   }
 }
 
@@ -24,9 +24,9 @@
   &--full-width {
     overflow: hidden;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100svh - 60px);
     @media screen and (min-width: 768px) {
-      height: calc(100vh - 70px);
+      height: calc(100svh - 70px);
     }
     object-fit: cover;
   }
